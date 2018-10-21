@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9104168C212A99BB0011DD3D /* icon.001.png in Resources */ = {isa = PBXBuildFile; fileRef = 9104168A212A99BA0011DD3D /* icon.001.png */; };
+		9104168D212A99BB0011DD3D /* icon.002.png in Resources */ = {isa = PBXBuildFile; fileRef = 9104168B212A99BB0011DD3D /* icon.002.png */; };
+		9104168F212A9A170011DD3D /* icon.003.png in Resources */ = {isa = PBXBuildFile; fileRef = 9104168E212A9A170011DD3D /* icon.003.png */; };
+		9113A267210454DC00B9F3A0 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9113A266210454DB00B9F3A0 /* ListTableViewCell.swift */; };
+		9113A26921045E6B00B9F3A0 /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9113A26821045E6B00B9F3A0 /* ListTableViewCell.xib */; };
 		917405D520D6427B00E318FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917405D420D6427B00E318FC /* AppDelegate.swift */; };
 		917405D720D6427B00E318FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917405D620D6427B00E318FC /* ViewController.swift */; };
 		917405DA20D6427B00E318FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 917405D820D6427B00E318FC /* Main.storyboard */; };
@@ -14,6 +19,8 @@
 		917405DF20D6427B00E318FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 917405DD20D6427B00E318FC /* LaunchScreen.storyboard */; };
 		917405EA20D6427B00E318FC /* StudyPlansTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917405E920D6427B00E318FC /* StudyPlansTests.swift */; };
 		917405F520D6427B00E318FC /* StudyPlansUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917405F420D6427B00E318FC /* StudyPlansUITests.swift */; };
+		91F4B74520D956930006D527 /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F4B74420D956930006D527 /* ListTableViewController.swift */; };
+		91F4B74720D956A70006D527 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F4B74620D956A70006D527 /* AddViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +41,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9104168A212A99BA0011DD3D /* icon.001.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.001.png; sourceTree = "<group>"; };
+		9104168B212A99BB0011DD3D /* icon.002.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.002.png; sourceTree = "<group>"; };
+		9104168E212A9A170011DD3D /* icon.003.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.003.png; sourceTree = "<group>"; };
+		9113A266210454DB00B9F3A0 /* ListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
+		9113A26821045E6B00B9F3A0 /* ListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
 		917405D120D6427B00E318FC /* StudyPlans.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudyPlans.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		917405D420D6427B00E318FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		917405D620D6427B00E318FC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +59,8 @@
 		917405F020D6427B00E318FC /* StudyPlansUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StudyPlansUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		917405F420D6427B00E318FC /* StudyPlansUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyPlansUITests.swift; sourceTree = "<group>"; };
 		917405F620D6427B00E318FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91F4B74420D956930006D527 /* ListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
+		91F4B74620D956A70006D527 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +88,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9104167B212A94BD0011DD3D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		917405C820D6427B00E318FC = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +102,7 @@
 				917405E820D6427B00E318FC /* StudyPlansTests */,
 				917405F320D6427B00E318FC /* StudyPlansUITests */,
 				917405D220D6427B00E318FC /* Products */,
+				9104167B212A94BD0011DD3D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,12 +119,19 @@
 		917405D320D6427B00E318FC /* StudyPlans */ = {
 			isa = PBXGroup;
 			children = (
+				9104168E212A9A170011DD3D /* icon.003.png */,
+				9104168A212A99BA0011DD3D /* icon.001.png */,
+				9104168B212A99BB0011DD3D /* icon.002.png */,
 				917405D420D6427B00E318FC /* AppDelegate.swift */,
 				917405D620D6427B00E318FC /* ViewController.swift */,
 				917405D820D6427B00E318FC /* Main.storyboard */,
 				917405DB20D6427B00E318FC /* Assets.xcassets */,
 				917405DD20D6427B00E318FC /* LaunchScreen.storyboard */,
 				917405E020D6427B00E318FC /* Info.plist */,
+				91F4B74420D956930006D527 /* ListTableViewController.swift */,
+				91F4B74620D956A70006D527 /* AddViewController.swift */,
+				9113A266210454DB00B9F3A0 /* ListTableViewCell.swift */,
+				9113A26821045E6B00B9F3A0 /* ListTableViewCell.xib */,
 			);
 			path = StudyPlans;
 			sourceTree = "<group>";
@@ -194,6 +223,11 @@
 					917405D020D6427B00E318FC = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 					917405E420D6427B00E318FC = {
 						CreatedOnToolsVersion = 9.2;
@@ -232,9 +266,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9104168F212A9A170011DD3D /* icon.003.png in Resources */,
 				917405DF20D6427B00E318FC /* LaunchScreen.storyboard in Resources */,
+				9113A26921045E6B00B9F3A0 /* ListTableViewCell.xib in Resources */,
+				9104168D212A99BB0011DD3D /* icon.002.png in Resources */,
 				917405DC20D6427B00E318FC /* Assets.xcassets in Resources */,
 				917405DA20D6427B00E318FC /* Main.storyboard in Resources */,
+				9104168C212A99BB0011DD3D /* icon.001.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,8 +297,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91F4B74520D956930006D527 /* ListTableViewController.swift in Sources */,
 				917405D720D6427B00E318FC /* ViewController.swift in Sources */,
+				91F4B74720D956A70006D527 /* AddViewController.swift in Sources */,
 				917405D520D6427B00E318FC /* AppDelegate.swift in Sources */,
+				9113A267210454DC00B9F3A0 /* ListTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,7 +404,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -414,7 +455,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -429,8 +470,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YK2Q6AHPZQ;
 				INFOPLIST_FILE = StudyPlans/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.litech.StudyPlans;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.litech-negi.StudyPlans";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -444,8 +486,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YK2Q6AHPZQ;
 				INFOPLIST_FILE = StudyPlans/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.litech.StudyPlans;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.litech-negi.StudyPlans";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

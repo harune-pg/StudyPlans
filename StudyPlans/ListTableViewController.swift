@@ -10,10 +10,14 @@ import UIKit
 
 class ListTableViewController: UITableViewController {
     
-    var wordArray: [Dictionary<String,String>] = []
+    var wordArray: [[String]]!
     
     var saveData = UserDefaults.standard
-
+    
+    let nowDate = NSDate()
+    let datedateFormat = DateFormatter()
+    var datedate: String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,6 +26,9 @@ class ListTableViewController: UITableViewController {
         
         self.tableView.estimatedRowHeight = 100
         self.tableView.rowHeight = UITableViewAutomaticDimension
+        
+        datedateFormat.dateFormat = "yyyyMMdd"
+        datedate = datedateFormat.string(from: nowDate as Date)
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -33,7 +40,7 @@ class ListTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         if saveData.array(forKey: "WORD") != nil {
-            wordArray = saveData.array(forKey: "WORD") as! [Dictionary<String, String>]
+            wordArray = saveData.array(forKey: "WORD") as! [[String]]
         }
         tableView.reloadData()
     }
@@ -60,11 +67,26 @@ class ListTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
             as! ListTableViewCell
             
-            let nowIndexPathDictionary = wordArray[indexPath.row]
+            var nowIndexPathDictionary = wordArray[indexPath.row]
             
-            cell.subjectLabel.text = nowIndexPathDictionary["subject"]
-            cell.contentsLabel.text = nowIndexPathDictionary["contents"]
-            cell.dateLabel.text = nowIndexPathDictionary["date"]
+            cell.dateLabel.text = nowIndexPathDictionary[0]
+            cell.subjectLabel.text = nowIndexPathDictionary[1]
+            cell.contentsLabel.text = nowIndexPathDictionary[2]
+            
+            let date3 = Int(nowIndexPathDictionary[3])!
+            let datedate2 = Int(datedate)!
+            let deffrence = date3 - datedate2
+            
+            if deffrence <= 0 {
+                let color3 = UIColor(red: 0.9, green: 0.1, blue: 0.7, alpha: 0.5)
+                cell.contentView.backgroundColor = color3
+            } else if deffrence <= 3 {
+                let color2 = UIColor(red: 0.7, green: 0.9, blue: 0.1, alpha: 0.5)
+                cell.contentView.backgroundColor = color2
+            } else {
+                let color = UIColor(red: 0.1, green: 0.7, blue: 0.9, alpha: 0.5)
+                cell.contentView.backgroundColor = color
+            }
             
             return cell
     }
@@ -74,7 +96,6 @@ class ListTableViewController: UITableViewController {
         
         let deleteButton: UITableViewRowAction = UITableViewRowAction(style: .normal, title: "削除") { (action, index) -> Void in
             self.wordArray.remove(at: indexPath.row)
-            print(self.wordArray)
             tableView.deleteRows(at: [indexPath], with: .fade)
             self.saveData.set(self.wordArray, forKey: "WORD")
         }
@@ -83,6 +104,11 @@ class ListTableViewController: UITableViewController {
         
         return [deleteButton]
     }
+    
+//    // cell背景色
+//    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+//        cell.contentView.backgroundColor = UIColor.lightGray
+//    }
 
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

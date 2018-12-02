@@ -72,6 +72,8 @@ class AddViewController: UIViewController, UITextFieldDelegate, UITextViewDelega
         TextView.layer.borderWidth = 0.5
         TextView.layer.cornerRadius = 10.0
         TextView.layer.masksToBounds = true
+        
+        TextField.returnKeyType = .done
     }
 
     override func didReceiveMemoryWarning() {

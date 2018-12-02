@@ -76,16 +76,19 @@ class ListTableViewController: UITableViewController {
             let date3 = Int(nowIndexPathDictionary[3])!
             let datedate2 = Int(datedate)!
             let deffrence = date3 - datedate2
-            
+
             if deffrence <= 0 {
-                let color3 = UIColor(red: 0.9, green: 0.1, blue: 0.7, alpha: 0.5)
-                cell.contentView.backgroundColor = color3
-            } else if deffrence <= 3 {
-                let color2 = UIColor(red: 0.7, green: 0.9, blue: 0.1, alpha: 0.5)
-                cell.contentView.backgroundColor = color2
+                cell.contentView.backgroundColor = UIColor.red
+                cell.dateLabel.textColor = UIColor.white
+                cell.subjectLabel.textColor = UIColor.white
+                cell.contentsLabel.textColor = UIColor.white
+                cell.dateLabel.font = UIFont(name: "System", size: 17)
+                cell.subjectLabel.font = UIFont(name: "System", size: 17)
+                cell.contentsLabel.font = UIFont(name: "System", size: 17)
+            } else if deffrence <= 2 {
+                cell.contentView.backgroundColor = UIColor(red: 255/255, green:255/255, blue: 255/255, alpha: 1)
             } else {
-                let color = UIColor(red: 0.1, green: 0.7, blue: 0.9, alpha: 0.5)
-                cell.contentView.backgroundColor = color
+                cell.contentView.backgroundColor = UIColor(red: 255/255, green:255/255, blue: 255/255, alpha: 1)
             }
             
             return cell

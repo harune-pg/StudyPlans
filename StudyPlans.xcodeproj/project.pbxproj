@@ -19,6 +19,7 @@
 		917405DF20D6427B00E318FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 917405DD20D6427B00E318FC /* LaunchScreen.storyboard */; };
 		917405EA20D6427B00E318FC /* StudyPlansTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917405E920D6427B00E318FC /* StudyPlansTests.swift */; };
 		917405F520D6427B00E318FC /* StudyPlansUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917405F420D6427B00E318FC /* StudyPlansUITests.swift */; };
+		91C7831021B3AC49002C44BC /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C7830F21B3AC49002C44BC /* NavigationViewController.swift */; };
 		91F4B74520D956930006D527 /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F4B74420D956930006D527 /* ListTableViewController.swift */; };
 		91F4B74720D956A70006D527 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F4B74620D956A70006D527 /* AddViewController.swift */; };
 /* End PBXBuildFile section */
@@ -59,6 +60,7 @@
 		917405F020D6427B00E318FC /* StudyPlansUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StudyPlansUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		917405F420D6427B00E318FC /* StudyPlansUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyPlansUITests.swift; sourceTree = "<group>"; };
 		917405F620D6427B00E318FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91C7830F21B3AC49002C44BC /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		91F4B74420D956930006D527 /* ListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
 		91F4B74620D956A70006D527 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -132,6 +134,7 @@
 				91F4B74620D956A70006D527 /* AddViewController.swift */,
 				9113A266210454DB00B9F3A0 /* ListTableViewCell.swift */,
 				9113A26821045E6B00B9F3A0 /* ListTableViewCell.xib */,
+				91C7830F21B3AC49002C44BC /* NavigationViewController.swift */,
 			);
 			path = StudyPlans;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91C7831021B3AC49002C44BC /* NavigationViewController.swift in Sources */,
 				91F4B74520D956930006D527 /* ListTableViewController.swift in Sources */,
 				917405D720D6427B00E318FC /* ViewController.swift in Sources */,
 				91F4B74720D956A70006D527 /* AddViewController.swift in Sources */,

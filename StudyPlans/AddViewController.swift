@@ -37,8 +37,8 @@ class AddViewController: UIViewController, UITextFieldDelegate, UITextViewDelega
 //        NotificationCenter.default.addObserver(self, selector: #selector(AddViewController.keyboardWillHide(_:)), name: NSNotification.Name.UIKeyboardDidHide, object: nil)
         
         // 保存
-        if saveData.array(forKey: "WORD") != nil {
-            wordArray = saveData.array(forKey: "WORD") as! [[String]]
+        if let savedArray = saveData.array(forKey: "WORD") as? [[String]] {
+            wordArray = savedArray
         }
         
         // キーボード開閉
@@ -60,7 +60,7 @@ class AddViewController: UIViewController, UITextFieldDelegate, UITextViewDelega
         pickerToolBar.tintColor = UIColor.white
         pickerToolBar.backgroundColor = UIColor.black
         // 右寄せのためのスペース設定
-        let spaceBarBtn = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: self, action: Selector(""))
+        let spaceBarBtn = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
         // 完了ボタンを設定
         let toolBarBtn = UIBarButtonItem(title: "完了", style: .done, target: self, action: #selector(toolBarBtnPush))
         // ツールバーにボタンを表示
@@ -85,6 +85,10 @@ class AddViewController: UIViewController, UITextFieldDelegate, UITextViewDelega
         
         if TextField.text != "" && TextView.text != "" && dateSelecter.text != ""{
             let wordDictionary = [dateSelecter.text!, TextField.text!, TextView.text!, date2!]
+            
+            if wordArray == nil {
+                wordArray = []
+            }
             
             if wordArray.isEmpty {
                 wordArray.append(wordDictionary)
@@ -119,6 +123,7 @@ class AddViewController: UIViewController, UITextFieldDelegate, UITextViewDelega
             }
         
         saveData.set(wordArray, forKey: "WORD")
+        saveData.synchronize()
         print(wordArray)
         
         let alert: UIAlertController = UIAlertController(title: "保存完了",message: "登録が完了しました",preferredStyle: .alert)

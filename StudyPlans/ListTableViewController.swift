@@ -38,9 +38,9 @@ class ListTableViewController: UITableViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        if saveData.array(forKey: "WORD") != nil {
-            wordArray = saveData.array(forKey: "WORD") as! [[String]]
+        super.viewWillAppear(animated)
+        if let savedWordArray = saveData.array(forKey: "WORD") as? [[String]] {
+                wordArray = savedWordArray
         }
         tableView.reloadData()
     }
@@ -59,7 +59,7 @@ class ListTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return wordArray.count
+        return wordArray?.count ?? 0
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath)
